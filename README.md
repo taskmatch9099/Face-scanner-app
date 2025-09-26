@@ -4,10 +4,11 @@ An advanced AI-powered face scanning application that provides comprehensive acn
 
 ## Features
 
-🔍 **Facial Recognition & Detection**
-- Automatic face detection in images
+🔍 **Facial Detection**
+- Automatic face detection using OpenCV Haar cascades
 - Multiple face support in single image
 - Precise face region extraction
+- Fallback to manual region analysis
 
 🔴 **Advanced Acne Detection**
 - Computer vision-based acne spot identification
@@ -37,29 +38,32 @@ cd Face-scanner-app
 pip install -r requirements.txt
 ```
 
-> **Note**: This application requires `dlib` and `face_recognition` libraries which may need additional system dependencies. On Ubuntu/Debian:
+**System Requirements**: Python 3.7+ with standard scientific packages
+
+## Demo Scripts
+
+### Quick Test (Recommended)
 ```bash
-sudo apt-get install build-essential cmake
-sudo apt-get install libopenblas-dev liblapack-dev 
-sudo apt-get install libx11-dev libgtk-3-dev
+python test_acne_detection.py
 ```
+This runs a focused test of the acne detection and heat map functionality.
 
-## Quick Start
-
-### Run Demo with Sample Image
+### Complete Face Analysis Demo
 ```bash
-python demo.py
+python simple_demo.py
 ```
-This creates a synthetic face image and demonstrates all features.
+Demonstrates complete face analysis pipeline with realistic skin simulation.
 
-### Analyze Your Own Image
+### Enhanced Demo with Multiple Options
 ```bash
-python demo.py --image path/to/your/face_image.jpg
-```
+# Use synthetic face
+python enhanced_demo.py
 
-### Create Sample Image Only
-```bash
-python demo.py --create-sample
+# Analyze your own image  
+python enhanced_demo.py --image path/to/your/face.jpg
+
+# Create synthetic face only
+python enhanced_demo.py --synthetic-only
 ```
 
 ## Usage
@@ -145,12 +149,10 @@ The application generates several types of output files:
 
 - Python 3.7+
 - OpenCV 4.8+
-- face_recognition 1.3+
 - NumPy 1.24+
 - Matplotlib 3.7+
 - Pillow 10.0+
 - SciPy 1.11+
-- dlib 19.24+
 
 ## Performance Notes
 
