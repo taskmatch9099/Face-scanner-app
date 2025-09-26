@@ -85,7 +85,9 @@ dist
 
 # Gatsby files
 .cache/
-public
+public/*
+!public/models/
+!public/favicon.ico
 
 # Storybook build outputs
 .out
