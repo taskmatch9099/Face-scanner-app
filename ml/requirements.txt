@@ -1,0 +1,14 @@
+opencv-python
+numpy
+Pillow
+mediapipe
+onnxruntime
+scikit-learn
+shapely
+tqdm
+matplotlib
+scikit-image
+ultralytics
+segmentation-models-pytorch
+torch
+torchvision
