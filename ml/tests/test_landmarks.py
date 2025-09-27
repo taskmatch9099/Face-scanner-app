@@ -1,0 +1,1 @@
+Tests for MediaPipe face mesh landmark conversion to polygons and binary skin masks.

@@ -1,0 +1,1 @@
+CLI test to ensure the pipeline runs end-to-end without a model.

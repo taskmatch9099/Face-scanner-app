@@ -1,3 +1,1 @@
-# Skin Analyzer Module
-
-# Add your implementation here
+The complete Python module implementing EXIF orientation correction, Gray-World White Balance, Lab-CLAHE, adaptive gamma correction, MediaPipe landmarks, YOLOv8-seg TTA detection/segmentation, fusion of redness/oiliness/pores, kernel density heatmaps, isotonic calibration, guided capture, and fairness normalization. Includes CLI.

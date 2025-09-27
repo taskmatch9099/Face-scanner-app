@@ -1,0 +1,1 @@
+QA gating tests for blur, brightness uniformity, and exposure checks.

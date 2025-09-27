@@ -1,0 +1,1 @@
+Tests for redness, oiliness, and pores maps, and kernel density heatmap generation from detections.

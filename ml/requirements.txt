@@ -1,14 +1,1 @@
-opencv-python
-numpy
-Pillow
-mediapipe
-onnxruntime
-scikit-learn
-shapely
-tqdm
-matplotlib
-scikit-image
-ultralytics
-segmentation-models-pytorch
-torch
-torchvision
+All required dependencies for the pipeline, including OpenCV, NumPy, Pillow, MediaPipe, ONNXRuntime, scikit-learn, segmentation-models-pytorch, and Torch.
