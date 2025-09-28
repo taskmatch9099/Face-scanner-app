@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  skin-health-backend:
+    build: ./integrations/skin-health-ai/backend
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./integrations/skin-health-ai/backend:/app

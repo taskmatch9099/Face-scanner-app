@@ -1,0 +1,29 @@
+name: Skin Health AI Import Check
+on:
+  push:
+    branches:
+      - integrate/skin-health-ai
+  pull_request:
+    branches:
+      - main
+jobs:
+  import-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          cd integrations/skin-health-ai/backend
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip wheel setuptools
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install fastapi uvicorn[standard] python-multipart opencv-python numpy scipy matplotlib pillow pydantic scikit-image; fi
+      - name: Check FastAPI imports
+        run: |
+          cd integrations/skin-health-ai/backend
+          source .venv/bin/activate
+          python -c "import fastapi, uvicorn, opencv_python, numpy, scipy, matplotlib, pillow, pydantic, skimage"
